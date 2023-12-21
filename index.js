@@ -1,8 +1,6 @@
 const { program } = require("commander");
 const contacts = require("./contacts.js");
 
-// console.log(contacts.addContact("asa", "assasaa", "2324324324"));
-
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":

@@ -18,7 +18,6 @@ async function updateContactsList(list) {
   }
 }
 
-// TODO: задокументувати кожну функцію
 async function listContacts() {
   try {
     const data = await fs.readFile(contactsPath, { encoding: "utf-8" });
@@ -29,7 +28,6 @@ async function listContacts() {
 }
 
 async function getContactById(contactId) {
-  // ...твій код. Повертає об'єкт контакту з таким id. Повертає null, якщо контакт з таким id не знайдений.
   try {
     const contacts = await listContacts();
 
@@ -40,7 +38,6 @@ async function getContactById(contactId) {
 }
 
 async function removeContact(contactId) {
-  // ...твій код. Повертає об'єкт видаленого контакту. Повертає null, якщо контакт з таким id не знайдений.
   try {
     const contacts = await listContacts();
     const deletedIndex = contacts.findIndex(
@@ -60,7 +57,6 @@ async function removeContact(contactId) {
 }
 
 async function addContact(name, email, phone) {
-  // ...твій код. Повертає об'єкт доданого контакту.
   try {
     const contacts = await listContacts();
     const contact = {
